@@ -1,0 +1,1 @@
+jQuery(".banner").slide({mainCell:".pic ul",autoPlay:true});

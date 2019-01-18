@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title><?php echo $title;?></title>
+
+<link rel="stylesheet" type="text/css" href="<?php echo HOME_CSS_PATH;?>reset.css"/>
+
+<?php if(is_array($css)){ ?>
+    <?php foreach ($css as $k => $v) { ?>
+            <link rel="stylesheet" type="text/css" href="<?php echo HOME_CSS_PATH.$v;?>.css"/>
+    <?php }?>
+
+<?php }else{?>
+        <link rel="stylesheet" type="text/css" href="<?php echo HOME_CSS_PATH.$css;?>.css"/>
+<?php }?>
+
+
+   <!--[if lt IE 9]>
+
+<script src="./<?php echo HOME_JS_PATH;?>IE9.js"></script>
+
+<![endif]-->
+
+<script type="text/javascript" src="<?php echo HOME_JS_PATH;?>jquery1.42.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0">
+
+
+</head>
+
+
+
+<body>
+

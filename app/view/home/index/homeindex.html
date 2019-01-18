@@ -1,0 +1,88 @@
+<html><head>
+    <meta itemprop="image" content="icon.png">
+    <title><?php echo $config['name']?></title>
+    <meta itemprop="name" content="<?php echo $config['name']?>">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0">
+    <meta name="keywords" content="iApp免费高效的学习与应用托管平台！">
+    <meta name="description" content="个人开发者的云端平台！">
+    <style type="text/css">
+        a {text-decoration: none}
+        body {margin: 0 auto;max-width: 880px;box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);min-width: 320px;padding-bottom: 0.1px}
+        html { background: #eee}
+        * {letter-spacing: 1px;font-family: 'Helvetica', 'Droidsansfallback', 'Heiti SC';box-sizing: border-box;outline: none;margin: 0;padding: 0;text-decoration: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);color: #333;}
+        .icon {width: 60px;height: 60px;margin-top: 15px;}
+        .title {font-size: 15px; margin-top: 10px;}
+        p {    font-size: 12pt;
+            color: #fff;
+            margin-top: 5px;
+            background: #4c87af;
+            padding: 10px;}
+        .content {margin-top: 10px;font-size: 14px;color: #757575;margin-bottom: 15px;}
+        .picture{overflow-x:scroll;width:100%;white-space:nowrap;margin-bottom: 25px;}
+        .child {display: inline-block;margin-left: 10px; }
+        .p {font-size: 12px;color: #939393;margin-top: 4px;}
+        .show {background: #fff;box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);border-radius: 2px;font-size: 14px;color: #616161;word-wrap: break-word;padding-top: 10px;}
+        .down {border-top-left-radius: 0.5em;border-top-right-radius: 0.5em;border-bottom-left-radius: 0.5em;border-bottom-right-radius: 0.5em;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 0px;border-left-width: 0px;margin-top: 10px;color: #ffffff;background: #4c87af;width: 100px;height: 30px;margin-bottom: 20px;}
+        .review{margin: 15px;font-size: 14px;color: #424242}
+        .user{margin-left: 15px;margin-top: 10px;}
+        .title2{color:#455A64 ;margin-top: 5px;margin-left: 30px;font-size: 14px;}
+    </style>
+
+</head>
+
+<body style="">
+
+<div class="show" align="center">
+    <img class="icon" src="./public/home/images/logo.jpg">
+    <div class="title"><b><?php echo $config['name']?></b></div>
+    <div class="p">
+        版本：<?php echo $config['version']?> 大小：<?php echo $config['size']?>MB 下载：<?php echo $config['download_num']?>次    </div>
+    <button class="down" onclick="window.location.href ='<?php echo $config['download_url']?>'">下载APK</button>
+</div>
+
+
+<div class="show" style="margin-top: 15px;padding-left: 15px;padding-right: 5px;">
+    <p>更新内容:</p>
+    <div class="content">更新内容：<br>
+        <?php echo $config['update_content']?>
+    </div>
+
+    <p>软件介绍:</p>
+    <div class="content">
+        <?php echo $config['desc']?>
+    </div>
+
+
+    <p>软件截图</p>
+    <div class="picture">
+        <a href="./public/home/images/img1.jpg">
+            <img src="<?php echo $config['left_img']?>" width="49%" height="100%">
+        </a>
+        <a href="./public/home/images/img2.jpg">
+            <img src="<?php echo $config['right_img']?>" width="49%" height="100%">
+        </a>
+
+    </div>
+</div>
+
+
+
+
+
+<div style="width=100%;background: #333;padding: 5px;" align="center">
+    <div style="font-size: 10pt;;margin-left: 10px;margin-top: 20px;">
+        <a href="/about.html" style="color: #E0E0E0">关于Fas · </a>
+        <a href="../bq" style="color: #E0E0E0">版权声明 · </a>
+        <a href="http://baidu.com" style="color:#E0E0E0">友情链接</a>
+    </div>
+    <div style="text-align:center;font-size:12px;color:#BDBDBD;margin:25px;margin-bottom: 35px;">Copyight © 2016-
+        2019 Fasv, All Rights Reserved.
+    </div>
+</div>
+
+
+
+
+
+</body></html>

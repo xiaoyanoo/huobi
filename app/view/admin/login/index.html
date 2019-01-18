@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+		<title>Simpla Admin | Sign In</title>
+
+		<!--                       CSS                       -->
+
+		<!-- Reset Stylesheet -->
+		<link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH;?>reset.css" type="text/css" media="screen" />
+
+		<!-- Main Stylesheet -->
+		<link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH;?>style.css" type="text/css" media="screen" />
+
+		<!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+		<link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH;?>invalid.css" type="text/css" media="screen" />
+
+		<!-- Colour Schemes
+
+		Default colour scheme is green. Uncomment prefered stylesheet to use it.
+
+		<link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH;?>blue.css" type="text/css" media="screen" />
+
+		<link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH;?>red.css" type="text/css" media="screen" />
+
+		-->
+
+		<!-- Internet Explorer Fixes Stylesheet -->
+
+		<!--[if lte IE 7]>
+			<link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH;?>ie.css" type="text/css" media="screen" />
+		<![endif]-->
+
+		<!--                       Javascripts                       -->
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="<?php echo ADMIN_JS_PATH;?>jquery-1.3.2.min.js"></script>
+
+		<!-- jQuery Configuration -->
+		<script type="text/javascript" src="<?php echo ADMIN_JS_PATH;?>simpla.jquery.configuration.js"></script>
+
+		<!-- Facebox jQuery Plugin -->
+		<script type="text/javascript" src="<?php echo ADMIN_JS_PATH;?>facebox.js"></script>
+
+		<!-- jQuery WYSIWYG Plugin -->
+		<script type="text/javascript" src="<?php echo ADMIN_JS_PATH;?>jquery.wysiwyg.js"></script>
+
+		<!-- Internet Explorer .png-fix -->
+
+		<!--[if IE 6]>
+			<script type="text/javascript" src="<?php echo ADMIN_JS_PATH;?>DD_belatedPNG_0.0.7a.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix('.png_bg, img, li');
+			</script>
+		<![endif]-->
+
+	</head>
+
+	<body id="login">
+
+		<div id="login-wrapper" class="png_bg">
+			<div id="login-top">
+
+				<h1>Simpla Admin</h1>
+				<!-- Logo (221px width) -->
+				<img id="logo" src="<?php echo ADMIN_IMG_PATH;?>logo.png" alt="Simpla Admin logo" />
+			</div> <!-- End #logn-top -->
+
+			<div id="login-content">
+
+				<form action="index.php?kk&c=login" method="post">
+
+					<p style="width:600px;">
+						<label>用户名</label>
+						<input  id="uname" name="username" class="text-input" type="text" value="<?php echo !empty($_COOKIE['username'])?$_COOKIE['username']:'';?>" /><span class="input-notification  png_bg"></span>
+					</p>
+					<div class="clear"></div>
+					<p style="width:600px;">
+						<label>密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+						<input id="pwd" name="password" class="text-input" type="password" value="<?php echo !empty($_COOKIE['password'])?$_COOKIE['password']:'';?>" /><span class="input-notification  png_bg"></span>
+					</p>
+					<div class="clear"></div>
+					<p style="width:600px;">
+						<label>验证码</label>
+						<input  name="code" class="text-input" type="text"  /><span class="input-notification  png_bg"></span>
+					</p>
+					<div class="clear"></div>
+					<p>
+						<img id="code_img" style="margin-left:70px;" src="index.php?kk&c=login&v=code">
+					</p>
+
+					<div class="clear"></div>
+					<p >
+						<input style="float:right;"  class="button" type="submit" value="登录" />
+					</p>
+
+				</form>
+			</div> <!-- End #login-content -->
+
+		</div> <!-- End #login-wrapper -->
+		<script type="text/javascript">
+			$(function(){
+				$('#code_img').click(function(){
+					var url = 'index.php?kk&c=login&v=code&';
+					$(this).attr('src',url+Math.random());//attr 方法   当只有一个参数的时候，获取那个一个参数为名字的属性
+					//两个参数的时候，是改变那个参数为名字的属性，改变的值就是第二个参数
+				})
+
+				$('input[name="code"]').blur(function(){
+					var len = $(this).val().length;
+					if(len!=4){
+						$(this).next().removeClass('success').addClass('error').html('验证码必须是4位');
+					}else{
+						$(this).next().removeClass('error').addClass('success').html('');
+					}
+				})
+				$('form').submit(function(){
+					$('input').blur();
+					var success = $('.success').length;
+
+				})
+			})
+		</script>
+  </body>
+  </html>

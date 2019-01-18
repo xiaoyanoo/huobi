@@ -1,0 +1,513 @@
+.title{
+
+	width:300px;
+
+	height:124px;
+
+	background-color:#ff3333;
+
+	float:left;
+
+	}
+
+.title h1{
+
+	font-size:30px;
+
+	color:#fff;
+
+	text-align:center;
+
+	padding-top:30px;	
+
+	}
+
+.title-bg{
+
+	width:40px;
+
+	height:8px;
+
+	background-color:#fff;
+
+	margin-left:100px;
+
+	}
+
+.main{
+
+	height:124px;
+
+	border-bottom:2px solid #ff3333;	
+
+	}	
+
+.subnav ul li{
+
+	width:72px;
+
+	height:25px;	
+
+	float:left;
+
+	font-size:18px;
+
+	margin-left:108px;
+
+	color:#959595;
+
+	cursor:pointer;
+
+	}
+
+.subnav ul li a{
+
+	text-decoration:none;
+
+	color:#666666;
+
+	}	
+
+.subnav ul li:hover{
+
+	border-bottom:2px solid #ff3333;
+
+	}
+
+.subnav ul li.on{
+
+	border-bottom:2px solid #ff3333;
+
+	}		
+
+.subnav{	
+
+	padding-top:50px;
+
+	float:left;	
+
+	}
+
+.subnav-right{
+
+	margin-top:105px;
+
+	float:left;
+
+	margin-left:155px;
+
+	}
+
+.subnav-right p a:hover{
+
+	color:#ff3333;
+
+	}
+
+.subnav-right span a:hover{
+
+	color:#ff3333;
+
+	}					
+
+.subnav-right p{
+
+	display:inline;
+
+	color:#0099cc;	
+
+	}
+
+.subnav-right span{
+
+	display:inline;			
+
+	}
+
+.subnav-right p a{
+
+	text-decoration:none;
+
+	color:#0099cc;
+
+	}	
+
+.subnav-right span a{
+
+	text-decoration:none;
+
+	color:#ff3333;	
+
+	}
+
+.main-bottom{
+
+	clear:both;
+
+	height:75px;
+
+	background-image:url(../images/sj.png);
+
+	background-repeat:no-repeat;
+
+	background-position:bottom;
+
+	border-bottom:2px dashed #666666;	
+
+	} 
+
+.main-bottom h1{
+
+	text-align:center;
+
+	line-height:80px;
+
+	font-size:24px;
+
+	color:#666666;
+
+	clear:both;
+
+	}
+
+	
+
+
+
+/*.pic-bottom{
+
+	width:350px;
+
+	height:150px;
+
+    border-bottom-right-radius:10px;
+
+    border-bottom-left-radius:10px;
+
+	background-color:#ff6666;
+
+	}*/
+
+.date {
+
+	width:150px;
+
+	height:150px;
+
+	background-color:#ff6666;
+
+	border-radius:15px;
+
+	}
+
+.date h1{
+
+	text-align:center;
+
+	font-size:24px;
+
+	color:#cccccc;
+
+	margin-top:34px;
+
+	}
+
+.date h1 a{
+
+	color:#cccccc;
+
+	display:block;
+
+	}	
+
+.date h2{
+
+	text-align:center;
+
+	font-size:24px;
+
+	color:#cccccc;
+
+	}
+
+.date h2 a{
+
+	color:#cccccc;
+
+	display:block;
+
+	}		
+
+.date-bg{
+
+	width:16px;
+
+	height:4px;
+
+	background-color:#cccccc;
+
+	margin-left:70px;	
+
+	}
+
+.main-news{
+
+	width:340px;
+
+	float:left;
+
+	}
+
+.date{
+
+	float:left;
+
+	}
+
+.text ul li h3{
+
+	margin-left:10px;
+
+	font-size:18px;
+
+	}
+
+.text ul li h3 a{
+
+	text-decoration:none;
+
+	display:block;
+
+	}
+
+.text ul li:hover h3 a{
+
+	color:#ff3333;
+
+	}	
+
+.text ul li h3 a{
+
+	display:block;
+
+    color:#333333;
+
+	}
+
+.news-bg{
+
+	width:20px;
+
+	height:2px;
+
+	background-color:#ff3333;
+
+	margin-left:10px;
+
+	margin-top:8px;	
+
+	}
+
+.more{
+
+	width:72px;
+
+	height:22px;
+
+	background-image:url(../images/llp.png);
+
+	background-repeat:no-repeat;
+
+	text-align:center;
+
+	margin-left:20px;
+
+	float:left;
+
+	}
+
+.more span a{
+
+	text-decoration:none;
+
+	color:#ff3333;
+
+	line-height:22px;
+
+	text-align:center;
+
+	display:block;
+
+	}	
+
+	
+
+.text ul li p{
+
+	margin-top:20px;
+
+	margin-left:10px;
+
+	}
+
+.text ul li p a{
+
+	color:#999999;
+
+	text-decoration:none;
+
+	display:block;
+
+	}	
+
+.main-news{
+
+	margin-left:15px;
+
+	}						
+
+.text ul li{
+
+	width:512px;
+
+	height:158px;
+
+	float:left;
+
+	margin-top:20px;
+
+	margin-left:60px;
+
+	padding-left:px;	
+
+	}
+
+.text ul li:hover .date{
+
+	background-image:url(../images/tm.png);
+
+	background-repeat:no-repeat;
+
+	cursor:pointer;
+
+	}
+
+.text ul li.on .date{
+
+	background-image:url(../images/tm.png);
+
+	background-repeat:no-repeat;
+
+	}
+
+.text ul li.on h3 a{
+
+	color:#ff3333;
+
+	}		
+
+.main-text{
+
+	overflow:hidden;
+
+	}
+
+		
+
+.page ul li{
+
+	width:44px;
+
+	height:44px;
+
+	float:left;
+
+	text-align:center;
+
+	color:#707070;
+
+	border:2px solid #ff6666;
+
+	line-height:44px;
+
+	margin-left:40px;
+
+	}	
+
+/*.page ul li:nth-child(1){
+
+	width:90px;
+
+	height:44px;
+
+	behavior: url(./ie-css3.htc);
+
+	}*/
+
+.page ul li a{
+
+	display:block;
+
+	}
+
+/*.page ul li:nth-child(8){	
+
+	width:90px;
+
+	height:44px;
+
+	behavior: url(./ie-css3.htc);
+
+	}	*/
+
+.page{
+
+	margin-left:200px;
+
+	margin-top:90px;
+
+	height:130px;	
+
+	}
+
+.page ul li:hover{
+
+	background-color:#ff0000;
+
+	}
+
+.page ul li a:hover{
+
+	background-color:#ff0000;
+
+	color:#fff;
+
+	text-decoration:none;
+
+	}
+
+.page ul li a{
+
+	color:#8c8c8c;
+
+	font-weight:bold;
+
+	}
+
+.page ul li a{
+
+	display:block;
+
+	}
+
+.page ul li.on a{
+
+	background-color:#ff0000;
+
+	color:#fff;
+
+	}
+
+
+
+		

@@ -1,0 +1,134 @@
+.title{
+	width:300px;
+	height:124px;
+	background-color:#ff3333;
+	float:left;
+	}
+.title h1{
+	font-size:30px;
+	color:#fff;
+	text-align:center;
+	padding-top:30px;	
+	}
+.title-bg{
+	width:40px;
+	height:8px;
+	background-color:#fff;
+	margin-left:100px;
+	}
+.main{
+	height:124px;
+	border-bottom:2px solid #ff3333;	
+	}	
+.subnav ul li{
+	width:90px;
+	height:25px;	
+	float:left;
+	font-size:18px;
+	margin-left:70px;
+	color:#959595;
+	cursor:pointer;
+	text-align:center;
+	}
+.subnav ul li.on{
+	border-bottom:2px solid #ff3333;
+	}
+.subnav ul li:nth-child(1){
+	width:72px;
+	behavior: url(./ie-css3.htc);
+	}
+.subnav ul li:nth-child(2){
+	width:72px;
+	behavior: url(./ie-css3.htc);
+	}
+.subnav ul li:nth-child(3){
+	width:72px;
+	behavior: url(./ie-css3.htc);
+	}					
+.subnav ul li a{
+	text-decoration:none;
+	color:#666666;
+	}	
+.subnav ul li:hover{
+	border-bottom:2px solid #ff3333;
+	}
+.subnav{	
+	padding-top:50px;
+	float:left;	
+	}
+.subnav-right{
+	margin-top:105px;
+	float:left;
+	margin-left:90px;
+	}	
+.subnav-right p{
+	display:inline;
+	color:#0099cc;	
+	}
+.subnav-right p a:hover{
+	color:#ff3333;
+	}
+.subnav-right span{
+	color:#0099cc;
+	}	
+.subnav-right span a:hover{
+	color:#ff3333;
+	}		
+.subnav-right span{
+	display:inline;			
+	}
+.subnav-right p a{
+	text-decoration:none;
+	color:#0099cc;
+	}	
+.subnav-right span a{
+	text-decoration:none;
+	color:#ff3333;	
+	}
+.main-bottom{
+	clear:both;
+	height:75px;
+	background-image:url(../images/sj.png);
+	background-repeat:no-repeat;
+	background-position:bottom;
+	border-bottom:2px dashed #a1a1a1;	
+	} 
+.main-bottom h1{
+	text-align:center;	
+	font-size:24px;
+	color:#666666;
+	clear:both;
+	margin-top:20px;
+	}
+.date h2{	
+	display:inline;
+	margin-left:425px;
+	color:#666666;
+	}	
+.date h3{	
+	display:inline;
+	margin-left:176px;
+	color:#666666;
+	}
+.main-pic img{
+	margin-top:15px;
+	}
+.main-text{
+	overflow:hidden;
+	}	
+.main-text ul li{
+	margin-top:35px;
+	margin-left:15px;
+	}	
+.main-text ul li p{
+	color:#666666;
+	text-indent:2em;
+	}
+.main-text ul li h1{
+	font-size:24px;
+	color:#666666;
+	}
+.main-text ul li h2{
+	color:#666666;
+	font-weight:300;
+	}			

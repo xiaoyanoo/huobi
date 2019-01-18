@@ -1,0 +1,98 @@
+			<div class="content-box"><!-- Start Content Box -->
+
+				<div class="content-box-header">
+
+					<h3>权限添加</h3>
+
+					<ul class="content-box-tabs">
+						<li><a href="#tab2" class="default-tab">Forms</a></li>
+					</ul>
+
+					<div class="clear"></div>
+
+				</div> <!-- End .content-box-header -->
+
+				<div class="content-box-content">
+
+					<div class="tab-content default-tab" id="tab2">
+
+						<form action="index.php?kk&c=privilege&v=add" method="post">
+
+							<fieldset> <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+
+								<p>
+									<label>权限组名</label>
+										<input class="text-input small-input" type="text" id="small-input" name="pri_name" />
+								</p>
+								<?php //print_r($menus);?>
+								<p>
+									<label>权限信息</label>
+									<?php foreach ($menus as $k => $v) {?>
+									<p>
+										<label>
+											<input type="checkbox" class="cb father"  name="privilege[]" value="<?php echo $v['id'];?>"><?php echo $v['title'];?>
+										</label>
+										<?php foreach ($v['son'] as $k1=> $v1) {?>
+											<input type="checkbox" class="cb son" name="privilege[]" value="<?php echo $v1['id'];?>"><?php echo $v1['title'];?>
+										<?php } ?>
+									</p>
+									<?php } ?>
+								</p>
+								<p>
+									<input id="check_all" class="button" type="button" value="全选" />
+									<input id="uncheck" class="button" type="button" value="取消全选" />
+								</p>
+								<p>
+									<input class="button" type="submit" value="添加" />
+								</p>
+
+							</fieldset>
+
+							<div class="clear"></div><!-- End .clear -->
+
+						</form>
+
+					</div> <!-- End #tab2 -->
+
+				</div> <!-- End .content-box-content -->
+
+			</div> <!-- End .content-box -->
+
+			<script>
+				$(function(){
+					$('#check_all').click(function(){
+						$('.cb').attr('checked',true);
+					});
+					$('#uncheck').click(function(){
+						$('.cb').attr('checked',false);
+					});
+					$('.father').click(function(){
+						var check = $(this).is(':checked');//判断当前元素是否被选中
+						if(check == true){//如果选中
+							$(this).parent().parent().find('.son').attr('checked',true);
+						}else{//没有选中
+							$(this).parent().parent().find('.son').attr('checked',false);
+						}
+					})
+					$('.son').click(function(){
+						// var check = $(this).is(':checked');//判断当前元素是否被选中
+						// if(check == true){
+						// 	$(this).parent().find('.father').attr('checked',true);
+						// }else{
+							var bro = $(this).parent().find('.son');//找到包括自己在内的所有同父级的子菜单
+							var flag = 0;//定义记录变量
+							$.each(bro,function(){//遍历所有的兄弟，包括自己
+								var check2 = $(this).is(':checked');
+								if(check2==true){//只要有一个是被选中的，就把记录变量改为1，跳出循环
+									flag = 1;
+									$(this).parent().find('.father').attr('checked',true);
+									return false;
+								}
+							})
+							if(flag == 0){//如果记录变量没有改变，说明所有兄弟，包括自己都没有被选中，父级菜单就要取消选中
+								$(this).parent().find('.father').attr('checked',false);
+							}
+						// }
+					})
+				})
+			</script>

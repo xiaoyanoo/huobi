@@ -1,0 +1,335 @@
+@charset "utf-8";
+html{sans-serif;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;font-family:"微软雅黑";}
+body{font:14px/1.5 \5b8b\4f53,Arial,sans-serif;background:#fff;}
+button,input,optgroup,select,textarea {margin: 0;font: inherit;color: inherit;}
+img{border:none}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:300;}
+input,label,img,th{vertical-align:middle}
+ul,ol,li{list-style:none}
+a{text-decoration:none;}
+
+button,html input[type="button"],input[type="reset"],input[type="submit"] {-webkit-appearance: button;cursor: pointer}
+textarea {overflow: auto}
+table{border-collapse:collapse;border-spacing:0}
+input,textarea,select{background:#fff;}
+a{outline:none;}
+	
+	
+
+
+.clearfix{*zoom:1;}
+.clearfix:after{content:"\200B";height:0;display:block;visibility:hiden;clear:both;}
+*{
+  margin:0;
+  padding:0;	
+	}	
+	
+.container{
+	width:1200px;
+	margin:0 auto;
+    }
+.header{
+	height:90px;
+	}
+.logo{
+	height:70px;
+	float:left;
+	}	
+.logo img{
+	width:60px;
+	height:60px;
+	margin-left:70px;
+	margin-top:14px;
+	float:left;
+	}
+.nav{
+	float:left;
+	margin-left:10px;
+	}
+.nav ul li{
+	width:64px;
+	height:30px;
+	float:left;
+	margin-top:30px;
+	margin-left:70px;
+	text-align:center;
+	font-size:16px;	
+	}
+.nav ul li:hover{
+	background-color:#fff;
+	
+	}	
+.nav ul li a{
+	color:#959595;
+	text-decoration:none;
+	display:block;
+	}
+.nav ul li:hover a{
+	color:#fe6565;
+	border-bottom:2px solid #ed1b24;	
+	}
+.nav ul li:nth-child(1){
+	width:34px;
+	behavior: url(./ie-css3.htc);
+	}	
+.nav ul li.on a{
+	border-bottom:2px solid #ed1b24;
+	color:#ff3333;
+	}
+.nav-right{
+	padding-top:20px;	
+	height:44px;
+	}	
+.nav-right ul li{
+	float:left;
+	width:42px;
+	height:42px;
+	padding-left:16px;
+	line-height:42px;
+	}
+.nav-right ul li img{
+	width:42px;
+	height:42px;
+	}
+.nav-right img{
+	margin-left:34px;
+	}
+.nav-right ul li{
+	margin-left:22px;
+	}		
+.nav-right ul li:nth-child(1):hover img:nth-child(1){
+	display:none;
+	behavior: url(./ie-css3.htc);
+	}
+.nav-right ul li:nth-child(1) img:nth-child(2){
+	display:none;
+	behavior: url(./ie-css3.htc);
+	}
+.nav-right ul li:nth-child(1):hover img:nth-child(2){
+	display:block;
+	behavior: url(./ie-css3.htc);
+	}
+.nav-right ul li:nth-child(2):hover img:nth-child(1){
+	display:none;
+	behavior: url(./ie-css3.htc);
+	}
+.nav-right ul li:nth-child(2) img:nth-child(2){
+	display:none;
+	behavior: url(./ie-css3.htc);
+	}	
+.nav-right ul li:nth-child(2):hover img:nth-child(2){
+	display:block;
+	behavior: url(./ie-css3.htc);
+	}
+.nav-right ul li:nth-child(3):hover img:nth-child(1){
+	display:none;
+	behavior: url(./ie-css3.htc);
+	}
+.nav-right ul li:nth-child(3) img:nth-child(2){
+	display:none;
+	behavior: url(./ie-css3.htc);
+	}	
+.nav-right ul li:nth-child(3):hover img:nth-child(2){
+	display:block;
+	behavior: url(./ie-css3.htc);
+	}
+.nav-right ul li:nth-child(4):hover img:nth-child(1){
+	display:none;
+	behavior: url(./ie-css3.htc);
+	}
+.nav-right ul li:nth-child(4) img:nth-child(2){
+	display:none;
+	behavior: url(./ie-css3.htc);
+	}	
+.nav-right ul li:nth-child(4):hover img:nth-child(2){
+	display:block;
+	behavior: url(./ie-css3.htc);
+	}																													
+.banner img{
+	width:100%;
+	}	
+.banner{
+	width:100%;
+	height:371px;
+	overflow:hidden;
+	position:relative;
+	}	
+ul,li{
+	list-style:none;
+	}
+.banner .hd{
+	position:absolute;
+	left:47%;
+	bottom:10%;
+	z-index:30;
+	}
+.banner .hd ul li{
+	width:20px;
+	height:20px;
+	background-image:url(../images/an1.png);
+	float:left;
+	margin-right:10px;
+	cursor:pointer;
+	}		
+.banner .hd ul li.on{
+	background-image:url(../images/an2.png);
+	}
+.pic ul li img{
+	width:100%;
+	height:371px;	
+	}
+.banner .prev{
+	width:47px;
+	height:71px;
+	background-image:url(../images/jt1.png);
+	position:absolute;
+	left:5%;
+	top:40%;
+	z-index:40;
+	}
+.banner .next{
+	width:47px;
+	height:71px;
+	background-image:url(../images/jt2.png);
+	position:absolute;
+	right:5%;
+	top:40%;
+	z-index:40;
+	}	
+.footer{	
+	height:226px;
+	background-color:#333333;
+	padding-left:240px;
+	padding-top:45px;
+	clear:both;	
+	margin-top:30px;	
+	}
+
+.footer-contact{
+	width:150px;
+	height:150px;
+	float:left;
+	}
+.footer-contact ul li{
+	wdith:150px;
+	height:20px;
+	}	
+.footer-contact ul li img{
+	float:left;
+	}	
+.footer-contact ul li p{
+	float:left;
+	}	
+.footer-contact-bg{
+	width:14px;
+	height:2px;
+	background-color:#fff;
+	}	
+.footer-about_us{
+	width:354px;
+	height:140px;
+	float:left;
+	margin-left:108px;	
+	}
+.footer-about_us ul li{
+	margin-left:16px;
+	}
+.footer-about_us ul li:nth-child(1){
+	margin-left:0;
+	behavior: url(./ie-css3.htc);
+	}		
+.footer-about_us-bg{
+	width:14px;
+	height:2px;
+	background-color:#fff;
+    margin-left:145px;
+	}	
+.footer-join_us{
+	float:left;
+	margin-left:108px;
+	}
+.footer-contact h1{
+	color:#fff;
+	font-size:18px;	
+	}
+.footer-contact h2{
+	color:#fff;
+	}
+.footer-about_us h1{
+	text-align:center;
+	color:#fff;
+	font-size:18px;
+	}
+.footer-about_us h2{
+	text-align:center;
+	color:#fff;
+	}
+.footer-join_us h1{
+	text-align:center;
+	color:#fff;
+	font-size:18px;
+	}
+.footer-join_us h2{
+	text-align:center;
+	color:#fff;
+	}
+.footer-about_us ul li{
+	float:left;
+	padding-left:14px;
+	margin-top:36px;
+	font-size:12px;
+	}
+.footer-about_us ul li a{
+	color:#fff
+	}	
+.footer-contact img{
+	width:20px;
+	height:20px;
+	float:left;
+	}
+.footer-contact ul li{	
+	padding-top:5px;
+	float:left;
+	}
+.footer-contact ul li p{
+	float:left;
+	color:#fff;
+	}
+.footer-contact ul li .on{
+	color:#0098cb;
+	}
+.footer-join_us p {
+	width:92px;
+	height:24px;
+	margin-top:5px;
+	text-align:center;
+	background-image:url(../images/fk.png);
+	background-repeat:no-repeat;
+	color:#0098cb;	
+	}
+.footer-bottom{
+	height:60px;
+	clear:both;
+	line-height:70px;
+	padding-left:240px;
+	color:#fff;	
+	}		
+.footer-bottom-bg{
+	width:504px;
+	height:4px;
+	background-color:#fff;
+	margin-top:170px;
+	margin-left:170px;
+	}
+.footer-join_us-bg{
+	width:14px;
+	height:2px;
+	background-color:#fff;
+	margin-left:15px;
+	}
+.footer{
+	overflow:hidden
+	}
+
+																																								

@@ -1,0 +1,91 @@
+<br/>
+<div>
+    &nbsp;管理后台
+    <!--&nbsp;&nbsp;<a href="index.php?c=index&v=editpwd">修改密码</a>-->
+    &nbsp;<a href="index.php?c=index&v=index&act=logout">退出登录</a>
+    &nbsp;<a target="_blank" href="index.php?c=index&v=homeindex">官网</a>
+</div>
+<br/>
+<br/>
+<form method="post" action="index.php?c=index&v=adminedit&act=config" enctype="multipart/form-data">
+<div>
+    &nbsp;下载量：<?php echo $info['download_num'];?>
+    <br/>
+    <br/>
+    &nbsp;版本号：<input  type="text" name="version" value="<?php echo $info['version'];?>"/>
+    <br/>
+    <br/>
+    &nbsp;软件大小：<input  type="text" name="size" value="<?php echo $info['size'];?>"/>Mb
+    <br/>
+    <br/>
+    &nbsp;名称：<input  type="text" name="name" value="<?php echo $info['name'];?>"/>
+    <br/>
+    <br/>
+    &nbsp;下载链接：<input  type="text" name="download_url" value="<?php echo $info['download_url'];?>"/>
+    <br/>
+    <br/>
+    &nbsp;左截图：<input  type="file" name="left_img" value="<?php echo $info['left_img'];?>"/>&nbsp;&nbsp;<a target="_blank" href="<?php echo $info['left_img'];?>"><img width="50" src="<?php echo $info['left_img'];?>" /></a>
+    <br/>
+    <br/>
+    &nbsp;右截图：<input  type="file" name="right_img" value="<?php echo $info['right_img'];?>"/>&nbsp;&nbsp;<a target="_blank" href="<?php echo $info['right_img'];?>"><img width="50" src="<?php echo $info['left_img'];?>" /></a>
+    <br/>
+    <br/>
+    &nbsp;<label>更新内容：</label><textarea rows="5" cols="30" name="update_content"  ><?php echo $info['update_content'];?></textarea>
+    <br/>
+    <br/>
+    &nbsp;<label>软件介绍：</label><textarea rows="5" cols="30" name="desc"  ><?php echo $info['desc'];?></textarea>
+    <br/>
+    <br/>
+    &nbsp;<input name="act" type="hidden" value="config"/>
+    &nbsp;<input type="submit" value="修改"/>
+</div>
+</form>
+<br/>
+<br/>
+<form method="post" action="index.php?c=index&v=adminindex&act=edit">
+    &nbsp;&nbsp;<input name="key" type="text" value=""/>&nbsp;<input type="submit" value="搜索"/>
+
+</form>
+<br/>
+<br/>
+<?php foreach($user as $k=>$v){?>
+<form method="post" action="index.php?c=index&v=adminedit&act=edit">
+    <div>
+        &nbsp; &nbsp;id：<?php echo $v['id'];?>
+        &nbsp;货币：<?php echo $v['money'];?>
+        <br/>
+        <br/>
+        &nbsp;&nbsp;增加：<input checked type="radio" name="type" value="1"/>
+        &nbsp;减少：<input  type="radio" name="type" value="2"/>
+        &nbsp;<input  type="text" name="money" value="0"/>
+        <br/>
+        <br/>
+        &nbsp;身份
+        <select name="level">
+            <option value="0" <?php if($v['level']==0){echo 'selected';}?>>呆音会员</option>
+            <option value="1" <?php if($v['level']==1){echo 'selected';}?>>超级呆音会员</option>
+            </select>
+        <br/>
+        <br/>
+        <!--&nbsp;&nbsp;输入管理密码：<input type="password" name="pwd"/>-->
+        <input type="hidden" name="id" value="<?php echo $v['id']?>"/>
+        &nbsp;<input name="act" type="hidden" value="edit"/>
+        &nbsp;<input type="submit" />
+        <br/>
+        <br/>
+    </div>
+
+</form>
+<?php }?>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div >
+    <!--<?php echo $page;?>-->
+</div>
+
+
+

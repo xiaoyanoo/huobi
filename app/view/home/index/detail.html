@@ -1,0 +1,50 @@
+
+
+      <div class="container">
+
+
+           <div class="text">
+
+             <div class="title clearfix">
+
+                   <h1>详情</h1>
+
+
+
+               <div class="main-news clearfix">
+
+                    <ul>
+                        <?php  foreach ($cate  as $k => $v) { ?>
+
+
+                       <li><div class="date">
+
+                           <h1><a href="detail.html"><?php echo $v['name'] ?></a></h1>
+
+                           <div class="date-bg"></div>
+
+
+                       </div>
+
+                        <div class="news-text">
+                            <?php  foreach ($v['news']  as $k1 => $v1) { ?>
+                            <h1><a target="_blank" href="<?php echo $v1['author']?>"><?php echo $v1['title'] ?></a></h1>
+
+                            <?php }?>
+
+                        </div>
+
+                       </li>
+                        <?php }?>
+
+                    </ul>
+
+               </div>
+                 <div class="news-more" style="width: 258px;"><span><a href="index.php?c=index&v=index">首页</a></span></div>
+
+
+
+
+             </div>
+
+      </div>
