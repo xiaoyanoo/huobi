@@ -3,7 +3,7 @@
 		die('非法入侵，请拨打110');
 	}
 	if(empty($_SESSION['id'])){
-		tips('登录成功','index.php?c=index&v=login');
+		tips('请先登录','index.php?c=index&v=login');
 	}
 	if(isset($_GET['act'])&&$_GET['act']=='logout'){//如果有get过来
 

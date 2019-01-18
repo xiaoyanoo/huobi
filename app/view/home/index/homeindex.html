@@ -38,13 +38,13 @@
     <div class="title"><b><?php echo $config['name']?></b></div>
     <div class="p">
         版本：<?php echo $config['version']?> 大小：<?php echo $config['size']?>MB 下载：<?php echo $config['download_num']?>次    </div>
-    <button class="down" onclick="window.location.href ='<?php echo $config['download_url']?>'">下载APK</button>
+    <button class="down" >下载APK</button>
 </div>
 
 
 <div class="show" style="margin-top: 15px;padding-left: 15px;padding-right: 5px;">
     <p>更新内容:</p>
-    <div class="content">更新内容：<br>
+    <div class="content">
         <?php echo $config['update_content']?>
     </div>
 
@@ -86,3 +86,15 @@
 
 
 </body></html>
+<script>
+    $(function(){
+        $('.down').click(function(){
+            var url="index.php?c=index&v=adminedit&&act=share";
+            var pa={};
+            $.post(url,pa,function(res){
+                window.location.href ='<?php echo $config['download_url']?>'
+            })
+        })
+    })
+</script>
+

@@ -49,9 +49,11 @@
 		$arr=upFile();
 		if($arr['status']==0){
 			$in = $arr['data'];
-		}
-		if(!empty($left_img)){
-
+			foreach($in as $k=>$v){
+				if(empty($v)){
+					unset($in[$k]);
+				}
+			}
 		}
 //		$config=select_one('*','config','id=1');
 		$in['version'] = $_POST['version'];
@@ -67,4 +69,10 @@
 			tips('修改失败','index.php?c=index&v=index');
 		}
 	}
+if($_GET&&isset($_GET['act'])&&$_GET['act']=='share'){
+	$config=select_one('*','config','id=1');
+	$in['download_num'] = $config['download_num']+1;
+	$res = update('config',$in,'id = 1');
+	echo $res;
+}
 ?>
