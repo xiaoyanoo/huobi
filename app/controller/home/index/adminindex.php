@@ -3,7 +3,7 @@
 		die('非法入侵，请拨打110');
 	}
 	if(empty($_SESSION['id'])){
-		tips('登录成功','index.php?c=index&v=login');
+		tips('请先登录','index.php?c=index&v=login');
 	}
 	if(isset($_POST['act'])&&$_GET['act']=='logout'){//如果有get过来
 
@@ -23,9 +23,9 @@
 	$page = home_page($url,$count['num'],$p);
 
 	$ss = ($p-1)*$n;//每页开始的数据下标
-	$wh='id>0';
+	$wh='id=0';
 	if(isset($_POST['key'])&&!empty($_POST['key'])){
-		$wh.=' and id='.$_POST['key'];
+		$wh.=' or id='.$_POST['key'];
 	}
 	$res = select_all('*','user',$wh,'id asc',"$ss,$n");
 	$config=select_one('*','config','id=1');

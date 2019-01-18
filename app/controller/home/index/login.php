@@ -19,7 +19,7 @@
 			if($res['type']==1){
 				tips('登录成功','index.php?c=index&v=adminindex');
 			}else{
-				tips('登录成功','index.php');
+				tips('登录成功','index.php?c=index&v=index');
 			}
 
 		}else{//没有结果 说明数据库里面没有数据与这个用户名跟密码匹配 那么不给登录
