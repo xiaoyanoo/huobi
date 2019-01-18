@@ -21,7 +21,7 @@
 		}else{
 			$in['money'] = $user['money']-trim($_POST['money']);
 		}
-		if($in['money']){
+		if($in['money']<0){
 			$in['money']=0;
 		}
 		$in['level'] = trim($_POST['level']);
